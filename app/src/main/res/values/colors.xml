@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="red_200">#FFF48FB1</color> <!-- odcień czerwieni -->
+    <color name="red_500">#FFE91E63</color> <!-- odcień czerwieni -->
+    <color name="red_700">#FFD81B60</color> <!-- odcień czerwieni -->
+    <color name="pink_200">#FFF48FB1</color> <!-- odcień różu -->
+    <color name="pink_500">#FFE91E63</color> <!-- odcień różu -->
+    <color name="pink_700">#FFD81B60</color> <!-- odcień różu -->
+    <color name="black">#FF000000</color> <!-- czarny -->
+    <color name="white">#FFFFFFFF</color> <!-- biały -->
+
+    <color name="buttonRed">#BA000F</color> <!-- ciemnoczerwony główny -->
+    <color name="BGLighter">#FFE0E5</color> <!-- jaśniejszy odcień gradientu tła -->
+    <color name="BGDarker">#FF9FA7</color> <!-- ciemniejszy odcień gradientu tła -->
+    <color name="StatsSKR">#99000C</color> <!-- dla obiektów związanych z SKR (ciśnienie skurczowe) -->
+    <color name="StatsROZ">#FF515E</color> <!-- dla obiektów związanych z ROZ (ciśnienie rozkurczowe -->
+    <color name="StatsTETNO">#585858</color> <!-- dla obiektów związanych z TETNO (tętno) -->
+    <color name="textGrey">#828282</color> <!-- jasnoszary - dla domyślnych napisów w polach -->
+    <color name="textBG">#E0E0E0</color> <!-- tła pól do wpisywania -->
+
+
+
+
+    <color name="colorSnackBarSuccess">#03A9F4</color> <!-- kolor Snackbara dla sukcesu -->
+    <color name="colorSnackBarError">#EB1B63</color> <!-- kolor Snackbara dla błędu -->
+
+
+
+
+</resources>
