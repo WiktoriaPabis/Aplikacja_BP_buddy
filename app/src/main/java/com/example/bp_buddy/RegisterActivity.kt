@@ -84,6 +84,26 @@ class RegisterActivity : BaseActivity() {
             return false
         }
 
+        if (password.length < 8){
+            showErrorSnackBar(getString(R.string.err_msg_password_length), true)
+            return false
+        }
+
+        if (!password.contains(Regex("[A-Z]"))){
+            showErrorSnackBar(getString(R.string.err_msg_password_upperCase), true)
+            return false
+        }
+
+        if (!password.contains(Regex("[0-9]"))){
+            showErrorSnackBar(getString(R.string.err_msg_password_count), true)
+            return false
+        }
+
+        if (!password.contains(Regex("[!@#$%&_?]"))){
+            showErrorSnackBar(getString(R.string.err_msg_password_specialSign), true)
+            return false
+        }
+
         return true
     }
 
@@ -109,7 +129,7 @@ class RegisterActivity : BaseActivity() {
                 OnCompleteListener <AuthResult>{ task ->
                     if(task.isSuccessful){
                         val firebaseUser: FirebaseUser = task.result!!.user!!
-                        showErrorSnackBar("You are registered successfully. Your user id is ${firebaseUser.uid}",false)
+                        showErrorSnackBar("Rejestracja zakończona powodzeniem",false)
 
                         val user = User(true, login)
 
@@ -119,7 +139,7 @@ class RegisterActivity : BaseActivity() {
                         finish()
 
                     } else{
-                        showErrorSnackBar(task.exception!!.message.toString(),true)
+//                        showErrorSnackBar(task.exception!!.message.toString(),true)
                     }
                 }
             )

@@ -7,6 +7,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthInvalidUserException
 
 /**
  * KLasa realizuje obsługę logowanie użytkownika przy pomocy Firebase Authentication.
@@ -86,7 +88,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
             return false
         }
 
-        showErrorSnackBar("Your details are valid", false)
+        showErrorSnackBar("Twoje dane są poprawne", false)
         return true
     }
 
@@ -105,16 +107,26 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
             FirebaseAuth.getInstance().signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener{task ->
                     if(task.isSuccessful){
-                        showErrorSnackBar("Success! You are logged now.", false)
+                        showErrorSnackBar("Świetnie! Zalogowałeś się", false)
                         goToMainActivity()
                         finish()
 
                     } else{
-                        showErrorSnackBar(task.exception!!.message.toString(),true)
+//                        showErrorSnackBar(task.exception!!.message.toString(),true)
+                        val errorMessage = when (task.exception) {
+                            is FirebaseAuthInvalidUserException -> "Adres email nie istnieje."
+                            is FirebaseAuthInvalidCredentialsException -> "Nieprawidłowe hasło."
+                            else -> "Wystąpił błąd podczas logowania: ${task.exception?.message}"
+                        }
+                        showErrorSnackBar(errorMessage, true)
                     }
                 }
         }
     }
+
+
+
+
 
     /**
      * Metoda przechodzenia do głównej aktywności po pomyślnym zalogowaniu i przekazanie uid do głównej aktywności.

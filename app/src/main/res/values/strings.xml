@@ -2,10 +2,13 @@
     <string name="app_name">BP_buddy</string>
 
 
-    <string name="err_msg_enter_email">Please enter your email</string>
-    <string name="err_msg_enter_name">Please enter your name</string>
-    <string name="err_msg_enter_password">Please enter your password</string>
-    <string name="err_msg_enter_reppassword">Please confirm your password</string>
-    <string name="err_msg_password_mismatch">Passwords mismatch</string>
-    <string name="register_success">You are registered succesfully</string>
+    <string name="err_msg_enter_email">Proszę podać email</string>
+    <string name="err_msg_enter_password">Proszę podać hasło</string>
+    <string name="err_msg_enter_reppassword">Proszę potwierdzić hasło</string>
+    <string name="err_msg_password_mismatch">Hasła są różne</string>
+    <string name="register_success">Rejestracja przebiegła prawidłowo</string>
+    <string name="err_msg_password_length">Hasło musi zawierać conajmniej 8 znaków</string>
+    <string name="err_msg_password_upperCase">Hasło musi zawierać conajmniej 1 dużą literę</string>
+    <string name="err_msg_password_specialSign">Hasło musi zawierać conajmniej 1 znak specjalny</string>
+    <string name="err_msg_password_count">Hasło musi zawierać conajmniej 1 cyfrę</string>
 </resources>
