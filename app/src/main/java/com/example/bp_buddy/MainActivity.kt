@@ -27,47 +27,14 @@ class MainActivity : AppCompatActivity() {
             // Pobierz adres e-mail zalogowanego użytkownika
             val email = currentUser.email
             if (email != null) {
-                // Wywołaj metodę addEmptyMeasurementCollection, przekazując adres e-mail użytkownika
-//                addEmptyMeasurementCollection(email.toString())
+
                 addMeasurement(email.toString())
+
 
             }
 
         }
 
-    }
-    private fun addEmptyMeasurementCollection(email: String) {
-        val db = Firebase.firestore
-
-        // Utwórz referencję do kolekcji "email" w bazie danych
-        val emailCollection = db.collection(email)
-
-
-        val currentTime = System.currentTimeMillis()
-        val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
-        val dateTime = dateFormat.format(Date(currentTime))
-
-        // Utwórz nowy dokument dla pomiarów użytkownika
-        val measurementsData = hashMapOf(
-            "Data i czas" to dateTime,
-            "Ciśnienie rozkurczowe" to "",
-            "Ciśnienie skurczowe" to "",
-            "Ciśnienie tętno" to ""
-        )
-
-
-        // Dodaj nowy dokument z danymi pomiarowymi
-//        emailCollection.document("Pomiary")
-            emailCollection.add(measurementsData)
-//            .set(measurementsData)
-            .addOnSuccessListener {
-                // Powiadomienie o sukcesie
-                println("Dokument pomiarów został pomyślnie dodany.")
-            }
-            .addOnFailureListener { e ->
-                // Obsługa błędu
-                println("Wystąpił błąd podczas dodawania dokumentu pomiarów: $e")
-            }
     }
 
     private fun addMeasurement(email: String) {
