@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         // Sprawdź, czy użytkownik jest zalogowany
         val currentUser = auth.currentUser
+
         if (currentUser != null) {
             // Pobierz adres e-mail zalogowanego użytkownika
             val email = currentUser.email
