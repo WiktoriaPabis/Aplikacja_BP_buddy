@@ -7,10 +7,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.Firebase
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import kotlinx.coroutines.delay
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.firestore
+import kotlinx.coroutines.tasks.await
 
 /**
  * Klasa obsługuje funkcjonalność rejestracji nowego uzytkownika.
@@ -121,7 +124,7 @@ class RegisterActivity : BaseActivity() {
     /**
      * Metoda realizująca rejestrację użytkownika przy pomocy Firebase Authentication.
      */
-    private fun registerUser(){
+     private fun registerUser(){
         if (validateRegisterDetails()){
             val login: String = inputEmail?.text.toString().trim() {it <= ' '}
             val password: String = inputPassword?.text.toString().trim() {it <= ' '}
@@ -134,7 +137,7 @@ class RegisterActivity : BaseActivity() {
 
                         val user = User(true, login)
 
-                        FirestoreClass().registerUserFS(this@RegisterActivity, user)
+//                        FirestoreClass().registerUserFS(this@RegisterActivity, user)
 
                         FirebaseAuth.getInstance().signOut()
                         finish()
@@ -153,4 +156,7 @@ class RegisterActivity : BaseActivity() {
     fun  userRegistrationSuccess(){
         Toast.makeText(this@RegisterActivity, resources.getString(R.string.register_success), Toast.LENGTH_LONG).show()
     }
+
+
+
 }
