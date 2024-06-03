@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-//    id("com.android.application")
+    id("kotlin-kapt")
     id("com.google.gms.google-services")
 }
 
@@ -28,6 +28,12 @@ android {
             )
         }
     }
+
+    buildFeatures{
+        dataBinding=true
+        viewBinding=true
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8

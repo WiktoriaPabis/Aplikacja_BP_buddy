@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Historia"
+        android:id="@+id/history"
+        android:icon="@drawable/calendar"/>
+
+    <item android:title="Statystyki"
+        android:id="@+id/statistics"
+        android:icon="@drawable/graph"/>
+
+    <item android:title="Powiadomienia"
+        android:id="@+id/notifications"
+        android:icon="@drawable/bell"/>
+
+    <item android:title="Ustawienia"
+        android:id="@+id/settings"
+        android:icon="@drawable/cog"/>
+
+</menu>

@@ -11,4 +11,6 @@
     <string name="err_msg_password_upperCase">Hasło musi zawierać conajmniej 1 dużą literę</string>
     <string name="err_msg_password_specialSign">Hasło musi zawierać conajmniej 1 znak specjalny</string>
     <string name="err_msg_password_count">Hasło musi zawierać conajmniej 1 cyfrę</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
