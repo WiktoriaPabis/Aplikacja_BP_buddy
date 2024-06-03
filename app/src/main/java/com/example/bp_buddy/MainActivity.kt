@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
             if (email != null) {
 
                 addMeasurement(email.toString())
+                getAllMeasurements(email.toString())
+
 
 
             }
@@ -73,6 +75,27 @@ class MainActivity : AppCompatActivity() {
             println("Wystąpił błąd podczas pobierania dokumentów: $e")
         }
     }
+
+    private fun getAllMeasurements(email: String) {
+        val db = Firebase.firestore
+        val userCollection = db.collection(email)
+
+        userCollection.get()
+            .addOnSuccessListener { documents ->
+                for (document in documents) {
+                    val measurementData = document.data
+                    println("Dane pomiaru: $measurementData")
+
+
+
+
+                }
+            }
+            .addOnFailureListener { e ->
+                println("Wystąpił błąd podczas pobierania dokumentów: $e")
+            }
+    }
+
 
 }
 
