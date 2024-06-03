@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "BP_buddy"
 include(":app")
- 
