@@ -113,11 +113,12 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
 
                     } else{
 //                        showErrorSnackBar(task.exception!!.message.toString(),true)
-                        val errorMessage = when (task.exception) {
-                            is FirebaseAuthInvalidUserException -> "Adres email nie istnieje."
-                            is FirebaseAuthInvalidCredentialsException -> "Nieprawidłowe hasło."
-                            else -> "Wystąpił błąd podczas logowania: ${task.exception?.message}"
-                        }
+                        val errorMessage = "Nieprawidłowy login lub hasło"
+//                            when (task.exception) {
+//                            is FirebaseAuthInvalidUserException -> "Adres email nie istnieje."
+//                            is FirebaseAuthInvalidCredentialsException -> "Nieprawidłowe hasło."
+//                            else -> "Wystąpił błąd podczas logowania: ${task.exception?.message}"
+//                        }
                         showErrorSnackBar(errorMessage, true)
                     }
                 }
