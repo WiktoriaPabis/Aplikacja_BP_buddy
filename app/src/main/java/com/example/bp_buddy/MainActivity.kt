@@ -14,6 +14,7 @@ import java.util.Locale
  */
 class MainActivity : AppCompatActivity() {
 
+    Activity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
