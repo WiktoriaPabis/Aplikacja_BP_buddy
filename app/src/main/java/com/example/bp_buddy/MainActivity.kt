@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
                 // Wywołaj metodę addEmptyMeasurementCollection, przekazując adres e-mail użytkownika
 //                addEmptyMeasurementCollection(email.toString())
                 addMeasurement(email.toString())
+
             }
 
         }
