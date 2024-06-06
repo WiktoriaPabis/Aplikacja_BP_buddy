@@ -59,7 +59,7 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
             }
             R.id.cancelButton -> {
                 // Obsługa kliknięcia przycisku "Anuluj"
-                dismiss() // Zamknij dialog
+                dismiss() // Zamknij
             }
         }
     }
