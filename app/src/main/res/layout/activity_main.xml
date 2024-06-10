@@ -7,6 +7,11 @@
     android:background="@drawable/background_gradient"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <TextView
         android:id="@+id/name"
         android:layout_width="157dp"
@@ -37,6 +42,16 @@
         app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toEndOf="@+id/name"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addMeasurementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dodaj Pomiar"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
 
     <FrameLayout
         android:layout_width="0dp"
