@@ -63,13 +63,50 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="174dp"
-        android:layout_marginEnd="191dp"
-        android:layout_marginBottom="299dp"
-        android:text="SETTINGS"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        android:text="Ustawienia"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Wyloguj"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/button_box"
+        app:backgroundTint="@color/buttonRed"
+        android:fontFamily="@font/in"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/passwordChangeButton"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Zmień hasło"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/button_box"
+        app:backgroundTint="@color/buttonRed"
+        android:fontFamily="@font/in"
+        app:layout_constraintTop_toTopOf="@id/logoutButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

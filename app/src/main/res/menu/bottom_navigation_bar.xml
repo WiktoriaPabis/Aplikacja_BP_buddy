@@ -6,7 +6,7 @@
         android:icon="@drawable/calendar"/>
 
     <item android:title="Statystyki"
-        android:id="@+id/statistics"
+        android:id="@+id/graph"
         android:icon="@drawable/graph"/>
 
     <item android:title="Powiadomienia"
