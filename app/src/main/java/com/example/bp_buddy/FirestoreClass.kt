@@ -22,13 +22,13 @@ class FirestoreClass {
         mFireStore.collection("users")
             .document(userInfo.userEmail)
             .set(userInfo, SetOptions.merge())
-            .addOnSuccessListener {
-                activity.userRegistrationSuccess()
-
-            }
-            .addOnFailureListener{
-
-            }
+//            .addOnSuccessListener {
+////                activity.userRegistrationSuccess()
+//
+//            }
+//            .addOnFailureListener{
+//
+//            }
     }
 
 }

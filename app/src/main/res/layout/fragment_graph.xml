@@ -51,17 +51,17 @@
         app:menu="@menu/bottom_navigation_bar"/>
 
 
-    <com.jjoe64.graphview.GraphView
-        android:id="@+id/graphView"
-        android:layout_width="match_parent"
-        android:layout_height="360dp"
-        android:padding="10dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="64dp"
-        android:background="@drawable/edittext_box"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView" />
+<!--    <com.jjoe64.graphview.GraphView-->
+<!--        android:id="@+id/graphView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="360dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:layout_marginBottom="64dp"-->
+<!--        android:background="@drawable/edittext_box"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"/>-->
 
 
 

@@ -23,15 +23,79 @@
         android:layout_height="wrap_content"
         android:hint="Tętno" />
 
-    <Button
-        android:id="@+id/confirmButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Potwierdź" />
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/cancelButton"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="46dp"
+            android:layout_height="56dp"
+            android:text="1"
+            android:textSize="18sp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="46dp"
+            android:layout_height="56dp"
+            android:text="2"
+            android:textSize="18sp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="46dp"
+            android:layout_height="56dp"
+            android:text="3"
+            android:textSize="18sp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="46dp"
+            android:layout_height="56dp"
+            android:text="4"
+            android:textSize="18sp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="46dp"
+            android:layout_height="56dp"
+            android:text="5"
+            android:textSize="18sp"
+            android:layout_margin="2dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Anuluj" />
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/confirmButton"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Potwierdź" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anuluj" />
+    </LinearLayout>
 </LinearLayout>

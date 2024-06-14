@@ -133,7 +133,7 @@ class RegisterActivity : BaseActivity() {
                 OnCompleteListener <AuthResult>{ task ->
                     if(task.isSuccessful){
                         val firebaseUser: FirebaseUser = task.result!!.user!!
-                        showErrorSnackBar("Rejestracja zakończona powodzeniem",false)
+                        Toast.makeText(this@RegisterActivity,"Rejestracja zakończona powodzeniem", Toast.LENGTH_SHORT).show()
 
                         val user = User(true, login)
 
@@ -153,9 +153,9 @@ class RegisterActivity : BaseActivity() {
     /**
      * Metoda wywoływana po udanej rejestracji użytkownika, która wyświetla wiadomość Toast.
      */
-    fun  userRegistrationSuccess(){
-        Toast.makeText(this@RegisterActivity, resources.getString(R.string.register_success), Toast.LENGTH_LONG).show()
-    }
+//    fun  userRegistrationSuccess(){
+//        Toast.makeText(this@RegisterActivity, resources.getString(R.string.register_success), Toast.LENGTH_LONG).show()
+//    }
 
 
 
