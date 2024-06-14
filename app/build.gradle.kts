@@ -46,14 +46,14 @@ android {
 dependencies {
 
     implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
-
-    implementation ("com.google.firebase:firebase-firestore-ktx:25.0.0")
+    implementation("androidx.core:core-ktx:2.2.0")
+    implementation("com.google.firebase:firebase-firestore-ktx:25.0.0")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-database:19.6.0")
-    implementation ("com.google.firebase:firebase-auth-ktx")
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.4.0-alpha05")
-    implementation ("androidx.navigation:navigation-ui-ktx:2.4.0-alpha05")
-    implementation ("com.jjoe64:graphview:4.2.2")
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.4.0-alpha05")
+    implementation("androidx.navigation:navigation-ui-ktx:2.4.0-alpha05")
+    implementation("com.jjoe64:graphview:4.2.2")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
