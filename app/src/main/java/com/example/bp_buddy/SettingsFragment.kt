@@ -10,18 +10,33 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 
-
+/**
+ * Fragment ustawień aplikacji, obsługujący opcje zmiany hasła i wylogowania użytkownika.
+ */
 class SettingsFragment : Fragment() {
     private var logoutButton: Button? = null
     private var passwordChangeButton: Button? = null
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    /**
+     * Metoda cyklu życia fragmentu, odpowiadająca za tworzenie i inflację widoku fragmentu.
+     *
+     * @param inflater           Inflater używany do inflacji widoku.
+     * @param container          Kontener rodzicowski, do którego zostanie dołączony widok fragmentu
+     *                           (null, jeśli nie ma).
+     * @param savedInstanceState Zapisany stan fragmentu, jeśli jest ponownie tworzony po zniszczeniu.
+     * @return Zainicjalizowany widok fragmentu.
+     */
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_settings, container, false)
     }
 
+    /**
+     * Metoda cyklu życia fragmentu, wywoływana po tym, jak widok fragmentu został utworzony.
+     *
+     * @param view               Zainicjalizowany widok fragmentu.
+     * @param savedInstanceState Zapisany stan fragmentu, jeśli jest ponownie tworzony po zniszczeniu.
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

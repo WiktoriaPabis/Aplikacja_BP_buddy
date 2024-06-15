@@ -18,6 +18,9 @@ import java.util.*
 import androidx.fragment.app.DialogFragment
 import com.google.android.material.snackbar.Snackbar
 
+/**
+ * Fragment dialogowy do dodawania nowych pomiarów ciśnienia krwi.
+ */
 class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
 
     private var inputSystolic: EditText?
@@ -46,6 +49,14 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
         selectedMood = null
     }
 
+    /**
+     * Metoda cyklu życia fragmentu dialogowego, odpowiedzialna za tworzenie i inflację widoku dialogowego.
+     *
+     * @param inflater           Inflater używany do inflacji widoku.
+     * @param container          Kontener rodzicowski, do którego zostanie dołączony widok dialogowy.
+     * @param savedInstanceState Zapisany stan fragmentu, jeśli jest ponownie tworzony po zniszczeniu.
+     * @return Zainicjalizowany widok dialogowy.
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -77,6 +88,11 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
         return view
     }
 
+    /**
+     * Metoda obsługująca kliknięcia na przyciski w dialogu.
+     *
+     * @param view Widok, który został kliknięty.
+     */
     override fun onClick(view: View?) {
         when (view?.id) {
             R.id.confirmButton -> {
@@ -99,9 +115,14 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
         }
     }
 
+    /**
+     * Metoda do wyboru nastroju użytkownika.
+     *
+     * @param mood Wybrany nastroju (od 1 do 5).
+     */
     private fun selectMood(mood: Int) {
         selectedMood = mood
-//         Resetuj kolory przycisków
+//         Resetowanie kolorów przycisków
         button1?.setBackgroundColor(
             ContextCompat.getColor(
                 requireContext(),
@@ -133,7 +154,7 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
             )
         )
 
-        // Ustaw kolor wybranego przycisku
+        // Ustawienie koloru wybranego przycisku
         when (mood) {
             1 -> button1?.setBackgroundColor(
                 ContextCompat.getColor(
@@ -172,6 +193,11 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
         }
     }
 
+    /**
+     * Metoda do walidacji wprowadzonych danych przed dodaniem pomiaru.
+     *
+     * @return `true`, jeśli dane są poprawne; `false`, jeśli wystąpił błąd walidacji.
+     */
     private fun validateInput(): Boolean {
         val systolic = inputSystolic?.text.toString().trim()
         val diastolic = inputDiastolic?.text.toString().trim()
@@ -200,6 +226,11 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
         return true
     }
 
+    /**
+     * Metoda do dodawania pomiaru do bazy danych Firebase.
+     *
+     * @param email Adres e-mail aktualnie zalogowanego użytkownika.
+     */
     private fun addMeasurement(email: String) {
         if (!validateInput()) return
 

@@ -112,23 +112,11 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
                         finish()
 
                     } else{
-//                        showErrorSnackBar(task.exception!!.message.toString(),true)
-                        val errorMessage = "Nieprawidłowy login lub hasło"
-//                            when (task.exception) {
-//                            is FirebaseAuthInvalidUserException -> "Adres email nie istnieje."
-//                            is FirebaseAuthInvalidCredentialsException -> "Nieprawidłowe hasło."
-//                            else -> "Wystąpił błąd podczas logowania: ${task.exception?.message}"
-//                        }
-                        showErrorSnackBar(errorMessage, true)
+                        showErrorSnackBar("Nieprawidłowy login lub hasło", true)
                     }
                 }
         }
     }
-
-
-
-
-
     /**
      * Metoda przechodzenia do głównej aktywności po pomyślnym zalogowaniu i przekazanie uid do głównej aktywności.
      */

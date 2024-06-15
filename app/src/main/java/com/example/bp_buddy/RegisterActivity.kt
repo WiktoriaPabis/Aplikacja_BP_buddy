@@ -137,26 +137,14 @@ class RegisterActivity : BaseActivity() {
 
                         val user = User(true, login)
 
-//                        FirestoreClass().registerUserFS(this@RegisterActivity, user)
-
                         FirebaseAuth.getInstance().signOut()
                         finish()
 
                     } else{
-//                        showErrorSnackBar(task.exception!!.message.toString(),true)
+                        showErrorSnackBar("Użytkownik już zarejestrowany",true)
                     }
                 }
             )
         }
     }
-
-    /**
-     * Metoda wywoływana po udanej rejestracji użytkownika, która wyświetla wiadomość Toast.
-     */
-//    fun  userRegistrationSuccess(){
-//        Toast.makeText(this@RegisterActivity, resources.getString(R.string.register_success), Toast.LENGTH_LONG).show()
-//    }
-
-
-
 }

@@ -6,8 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MeasurementsAdapter(private val measurementsList: List<Map<String, Any>>) :
-    RecyclerView.Adapter<MeasurementsAdapter.MeasurementViewHolder>() {
+
+class MeasurementsAdapter(private val measurementsList: List<Map<String, Any>>,
+                          private val clickListener: (Int) -> Unit // Listener dla kliknięcia elementu
+    ): RecyclerView.Adapter<MeasurementsAdapter.MeasurementViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MeasurementViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.measurement_adapter, parent, false)
@@ -17,6 +19,11 @@ class MeasurementsAdapter(private val measurementsList: List<Map<String, Any>>) 
     override fun onBindViewHolder(holder: MeasurementViewHolder, position: Int) {
         val measurement = measurementsList[position]
         holder.bind(measurement)
+
+        // Ustawienie OnClickListener dla elementu w RecyclerView
+        holder.itemView.setOnClickListener {
+            clickListener.invoke(holder.adapterPosition)
+        }
     }
 
     override fun getItemCount(): Int = measurementsList.size

@@ -20,6 +20,9 @@ import java.util.*
 import androidx.fragment.app.DialogFragment
 import com.google.android.material.snackbar.Snackbar
 
+/**
+ * Fragment dialogowy do wyświetlania informacji o dokonanym pomiarze ciśnienia krwi.
+ */
 class MeasurementInfoDialogFragment : DialogFragment(), View.OnClickListener {
 
     private var previousFragment: DialogFragment?
@@ -38,10 +41,23 @@ class MeasurementInfoDialogFragment : DialogFragment(), View.OnClickListener {
 
     }
 
+    /**
+     * Metoda ustawiająca poprzedni fragment dialogowy, który wywołał bieżący dialog.
+     *
+     * @param fragment Poprzedni fragment dialogowy.
+     */
     fun setPreviousFragment(fragment: DialogFragment) {
         previousFragment = fragment
     }
 
+    /**
+     * Metoda cyklu życia fragmentu dialogowego, odpowiedzialna za tworzenie i inflację widoku dialogowego.
+     *
+     * @param inflater           Inflater używany do inflacji widoku.
+     * @param container          Kontener rodzicowski, do którego zostanie dołączony widok dialogowy.
+     * @param savedInstanceState Zapisany stan fragmentu, jeśli jest ponownie tworzony po zniszczeniu.
+     * @return Zainicjalizowany widok dialogowy.
+     */
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -70,6 +86,11 @@ class MeasurementInfoDialogFragment : DialogFragment(), View.OnClickListener {
         return view
     }
 
+    /**
+     * Metoda obsługująca kliknięcia przycisków w dialogu.
+     *
+     * @param view Widok, który został kliknięty.
+     */
     override fun onClick(view: View?) {
         when (view?.id) {
             R.id.confirmButton1 -> {
@@ -82,14 +103,21 @@ class MeasurementInfoDialogFragment : DialogFragment(), View.OnClickListener {
 
     }
 // diastolic= rozkurczowe
+    /**
+     * Metoda do wyświetlenia informacji o dokonanym pomiarze.
+     *
+     * @param systolicValue  Wartość ciśnienia skurczowego.
+     * @param diastolicValue Wartość ciśnienia rozkurczowego.
+     * @param pulseValue     Wartość tętna.
+     */
     private fun measurementInformation(systolicValue: Int, diastolicValue: Int, pulseValue: Int) {
         val baseText1 = "Twoje ciśnienie skurczowe jest: "
         val baseText2 = "Twoje ciśnienie rozkurczowe jest: "
         val baseText3 = "Twoje tętno jest: "
 
     val condition1 = when {
-        systolicValue in 0..90 -> "zbyt niskie, udaj się do lekarza/zażyj leki"
-        systolicValue in 90..120 -> "optymalne"
+        systolicValue in 0..89 -> "zbyt niskie, udaj się do lekarza/zażyj leki"
+        systolicValue in 90..119 -> "optymalne"
         systolicValue in 120..129 -> "w normie"
         systolicValue in 130..139 -> "wysokie"
         systolicValue > 140 -> "zbyt wysokie, udaj się do lekarza/zażyj leki"
@@ -100,8 +128,8 @@ class MeasurementInfoDialogFragment : DialogFragment(), View.OnClickListener {
 
 
     val condition2 = when {
-        diastolicValue in 0..60 -> "zbyt niskie, udaj się do lekarza/zażyj leki"
-        diastolicValue in 60..80 -> "optymalne"
+        diastolicValue in 0..59 -> "zbyt niskie, udaj się do lekarza/zażyj leki"
+        diastolicValue in 60..79 -> "optymalne"
         diastolicValue in 80..84 -> "w normie"
         diastolicValue in 85..89 -> "wysokie"
         diastolicValue > 90 -> "zbyt wysokie, udaj się do lekarza/zażyj leki"
@@ -111,7 +139,7 @@ class MeasurementInfoDialogFragment : DialogFragment(), View.OnClickListener {
         measurementInfo2?.text = updatedText2
 
     val condition3 = when {
-        pulseValue in 0..60 -> "zbyt niskie"
+        pulseValue in 0..59 -> "zbyt niskie"
         pulseValue in 60..100 -> "w normie"
         pulseValue > 100 -> "zbyt wysokie"
         else -> ""

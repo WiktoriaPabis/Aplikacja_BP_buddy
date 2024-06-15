@@ -14,10 +14,18 @@ import java.util.Locale
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 /**
- * Główna aktywność aplikacji, pojawiająca się po poprawnym zalogowaniu.
+ * Główna aktywność aplikacji, odpowiedzialna za zarządzanie widokami fragmentów oraz
+ * interakcje użytkownika.
  */
 class MainActivity : AppCompatActivity() {
-
+    /**
+     * Metoda cyklu życia wywoływana podczas tworzenia aktywności.
+     * Inicjalizuje widok, obsługuje logikę związana z zalogowanym użytkownikiem oraz dodaje
+     * obsługę paska nawigacyjnego.
+     *
+     * @param savedInstanceState Zapisany stan aktywności, który może być użyty do przywrócenia
+     *                           wcześniejszego stanu.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -71,6 +79,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Funkcja zamieniająca bieżący fragment na nowy fragment.
+     *
+     * @param fragment  Nowy fragment, który ma być wyświetlony.
+     */
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)
