@@ -75,7 +75,7 @@
     <Button
         android:id="@+id/logoutButton"
         android:layout_width="120dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginTop="150dp"
         android:text="Wyloguj"
         android:textSize="20sp"
@@ -92,8 +92,8 @@
 
     <Button
         android:id="@+id/passwordChangeButton"
-        android:layout_width="125dp"
-        android:layout_height="40dp"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:text="Zmień hasło"
         android:textSize="20sp"
