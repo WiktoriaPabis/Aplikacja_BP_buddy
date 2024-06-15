@@ -233,6 +233,12 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
 
                     val dialog = MeasurementInfoDialogFragment()
                     dialog.setPreviousFragment(this@AddMeasurementDialogFragment)
+                    // Przekazanie wartości ciśnienia do dialogu
+                    val args = Bundle()
+                    args.putString("diastolicValue", inputDiastolic?.text.toString())
+                    args.putString("systolicValue", inputSystolic?.text.toString())
+                    args.putString("pulseValue", inputPulse?.text.toString())
+                    dialog.arguments = args
                     dialog.show(childFragmentManager, "MeasurementInfoDialogFragment")
 
 //                    dismiss() // zamknięcie dialogu
