@@ -48,6 +48,7 @@ class MeasurementInfoDialogFragment : DialogFragment(), View.OnClickListener {
      */
     fun setPreviousFragment(fragment: DialogFragment) {
         previousFragment = fragment
+
     }
 
     /**
