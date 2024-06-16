@@ -223,8 +223,26 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
         val userCollection = db.collection(email)
 
         userCollection.get().addOnSuccessListener { documents ->
-            val nextMeasurementNumber = documents.size() + 1
-            val measurementId = "Pomiar $nextMeasurementNumber"
+            var nextMeasurementNumber = documents.size() + 1
+            var measurementId = "Pomiar $nextMeasurementNumber"
+
+            var foundUnique = false
+            while (!foundUnique) {
+                var unique = true
+                for (document in documents) {
+                    val measurementId2 = document.id
+                    if (measurementId2 == measurementId) {
+                        unique = false
+                        nextMeasurementNumber += 1
+                        measurementId = "Pomiar $nextMeasurementNumber"
+                        break // Przerwanie pętli, aby nie sprawdzać dalej
+                    }
+                }
+                if (unique) {
+                    foundUnique = true // Znaleziono unikalny numer, kończymy pętlę while
+                }
+            }
+
 
             val currentTime = System.currentTimeMillis()
             val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())

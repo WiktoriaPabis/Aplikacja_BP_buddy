@@ -71,7 +71,8 @@ class EditMeasurementFragment : Fragment() {
         }
 
         cancelButton?.setOnClickListener {
-            fragmentManager?.popBackStack()
+            fragmentManager?.popBackStack() // usuwa górny element ze stosu fragmentów, cofnięcie do
+                         // poprzedniego fragmentu na stosie, symulujacja działania przycisku wstecz
         }
 
         deleteButton?.setOnClickListener {
@@ -115,7 +116,7 @@ class EditMeasurementFragment : Fragment() {
         }
 
         if (!mood?.isDigitsOnly()!!) {
-            showErrorSnackBar("Samopoczucie musi być liczbą", true)
+            showErrorSnackBar("Samopoczucie musi być liczbą: od 1 - najgorsze, do 5 - najlepsze", true)
             return
         }
 
@@ -123,7 +124,6 @@ class EditMeasurementFragment : Fragment() {
             showErrorSnackBar("Samopoczucie musi być w zakresie od 1 do 5 (1 najgorsze :( 5 najlepsze :) )", true)
             return
         }
-
 
         val db = Firebase.firestore
         val measurementMap = hashMapOf(
@@ -189,5 +189,6 @@ class EditMeasurementFragment : Fragment() {
                 }
         }
     }
+
 }
 
