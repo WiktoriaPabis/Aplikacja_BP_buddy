@@ -35,7 +35,7 @@
             android:padding="10dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:background="@color/pink_700">
+            android:background="@drawable/picker_style">
 
             <LinearLayout
                 android:layout_width="match_parent"
