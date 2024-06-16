@@ -11,6 +11,34 @@
     <string name="err_msg_password_upperCase">Hasło musi zawierać conajmniej 1 dużą literę</string>
     <string name="err_msg_password_specialSign">Hasło musi zawierać conajmniej 1 znak specjalny</string>
     <string name="err_msg_password_count">Hasło musi zawierać conajmniej 1 cyfrę</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="powiadomienia">Powiadomienia</string>
+    <string name="bp_buddy">BP Buddy</string>
+    <string name="logowanie">Logowanie</string>
+    <string name="adres_e_mail">Adres e-mail</string>
+    <string name="haslo">Hasło</string>
+    <string name="zaloguj">Zaloguj</string>
+    <string name="nie_masz_konta">Nie masz konta?</string>
+    <string name="zarejestruj_sie">Zarejestruj się</string>
+    <string name="dodaj_pomiar">Dodaj Pomiar</string>
+    <string name="rejestracja">Rejestracja</string>
+    <string name="powtorz_haslo">Powtórz hasło</string>
+    <string name="zarejestruj">Zarejestruj</string>
+    <string name="posiadasz_juz_konto">Posiadasz już konto?</string>
+    <string name="zaloguj_sie">Zaloguj się</string>
+    <string name="ustawienia">Ustawienia</string>
+    <string name="wyloguj">Wyloguj</string>
+    <string name="zmien_haslo">Zmień hasło</string>
+    <string name="cisnienie_skurczowe">Ciśnienie skurczowe</string>
+    <string name="cisnienie_rozkurczowe">Ciśnienie rozkurczowe</string>
+    <string name="tetno">Tętno</string>
+    <string name="potwierdz">Potwierdź</string>
+    <string name="anuluj">Anuluj</string>
+    <string name="odswiez">Odśwież</string>
+    <string name="samopoczucie">Samopoczucie</string>
+    <string name="data_i_godzina">Data i godzina</string>
+    <string name="usun_pomiar">Usuń pomiar</string>
+    <string name="nowe_haslo">Nowe hasło</string>
+    <string name="historia">Historia</string>
+    <string name="statystyki">Statystyki</string>
 </resources>

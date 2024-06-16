@@ -123,72 +123,42 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
     private fun selectMood(mood: Int) {
         selectedMood = mood
 //         Resetowanie kolorów przycisków
-        button1?.setBackgroundColor(
-            ContextCompat.getColor(
-                requireContext(),
-                R.color.textBG
-            )
+        button1?.setBackgroundResource(
+                R.drawable.buzki5
         )
-        button2?.setBackgroundColor(
-            ContextCompat.getColor(
-                requireContext(),
-                R.color.textBG
-            )
+        button2?.setBackgroundResource(
+            R.drawable.buzki4
         )
-        button3?.setBackgroundColor(
-            ContextCompat.getColor(
-                requireContext(),
-                R.color.textBG
-            )
+        button3?.setBackgroundResource(
+            R.drawable.buzki3
         )
-        button4?.setBackgroundColor(
-            ContextCompat.getColor(
-                requireContext(),
-                R.color.textBG
-            )
+        button4?.setBackgroundResource(
+            R.drawable.buzki2
         )
-        button5?.setBackgroundColor(
-            ContextCompat.getColor(
-                requireContext(),
-                R.color.textBG
-            )
+        button5?.setBackgroundResource(
+            R.drawable.buzki1
         )
 
         // Ustawienie koloru wybranego przycisku
         when (mood) {
-            1 -> button1?.setBackgroundColor(
-                ContextCompat.getColor(
-                    requireContext(),
-                    R.color.pink_200
-                )
+            1 -> button1?.setBackgroundResource(
+                    R.drawable.buzki5_alt
             )
 
-            2 -> button2?.setBackgroundColor(
-                ContextCompat.getColor(
-                    requireContext(),
-                    R.color.pink_200
-                )
+            2 -> button2?.setBackgroundResource(
+                R.drawable.buzki4_alt
             )
 
-            3 -> button3?.setBackgroundColor(
-                ContextCompat.getColor(
-                    requireContext(),
-                    R.color.pink_200
-                )
+            3 -> button3?.setBackgroundResource(
+                R.drawable.buzki3_alt
             )
 
-            4 -> button4?.setBackgroundColor(
-                ContextCompat.getColor(
-                    requireContext(),
-                    R.color.pink_200
-                )
+            4 -> button4?.setBackgroundResource(
+                R.drawable.buzki2_alt
             )
 
-            5 -> button5?.setBackgroundColor(
-                ContextCompat.getColor(
-                    requireContext(),
-                    R.color.pink_200
-                )
+            5 -> button5?.setBackgroundResource(
+                R.drawable.buzki1_alt
             )
         }
     }

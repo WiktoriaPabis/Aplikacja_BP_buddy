@@ -49,7 +49,7 @@ dependencies {
 
         implementation ("com.google.firebase:firebase-firestore-ktx:25.0.0")
         implementation("com.google.firebase:firebase-analytics")
-
+        implementation ("com.jjoe64:graphview:4.2.2")
         implementation ("com.google.firebase:firebase-auth-ktx")
 
         implementation ("androidx.navigation:navigation-fragment-ktx:2.4.0-alpha05")

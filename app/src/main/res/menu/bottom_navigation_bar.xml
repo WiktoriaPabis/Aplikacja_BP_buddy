@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Historia"
+    <item android:title="@string/historia"
         android:id="@+id/history"
         android:icon="@drawable/calendar"/>
 
-    <item android:title="Statystyki"
+    <item android:title="@string/statystyki"
         android:id="@+id/graph"
         android:icon="@drawable/graph"/>
 
-    <item android:title="Powiadomienia"
+    <item android:title="@string/powiadomienia"
         android:id="@+id/notifications"
         android:icon="@drawable/bell"/>
 
-    <item android:title="Ustawienia"
+    <item android:title="@string/ustawienia"
         android:id="@+id/settings"
         android:icon="@drawable/cog"/>
 

@@ -8,24 +8,30 @@
     android:background="@drawable/background_gradient"
     tools:context=".LoginActivity">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
     <ImageView
         android:id="@+id/logo"
         android:layout_width="160dp"
         android:layout_height="160dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/bp"
-        android:textSize="32dp"
+        android:textSize="32sp"
         android:textColor="@color/white"
         android:textAllCaps="true"
         android:textStyle="normal"
@@ -33,18 +39,16 @@
         android:shadowDx="4"
         android:shadowDy="4"
         android:shadowRadius="10"
-        android:text="BP Buddy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
+        android:text="@string/bp_buddy"
         />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="24dp"
-        android:text="Logowanie"
+        android:text="@string/logowanie"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -55,50 +59,54 @@
 
     <EditText
         android:id="@+id/inputEmail"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:paddingLeft="12dp"
+        android:paddingStart="12dp"
         android:background="@drawable/edittext_box"
         android:ems="10"
-        android:hint="Adres e-mail"
+        android:hint="@string/adres_e_mail"
         android:inputType="textPersonName"
         android:fontFamily="@font/in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="RtlSymmetry,TextFields" />
 
     <EditText
         android:id="@+id/inputPassword2"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="12dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:paddingLeft="12dp"
+        android:paddingStart="12dp"
         android:background="@drawable/edittext_box"
         android:ems="10"
-        android:hint="Hasło"
+        android:hint="@string/haslo"
         android:fontFamily="@font/in"
         android:inputType="textPersonName|textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail"
+        tools:ignore="RtlSymmetry" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="116dp"
         android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="24dp"
-        android:text="Zaloguj"
-        android:textSize="16dp"
+        android:text="@string/zaloguj"
+        android:textSize="16sp"
         android:textAllCaps="false"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:background="@drawable/button_box"
-        app:backgroundTint="@color/buttonRed"
         android:fontFamily="@font/in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,8 +116,9 @@
         android:id="@+id/registerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
-        android:text="Nie masz konta?"
+        android:text="@string/nie_masz_konta"
         android:textColor="@color/black"
         android:fontFamily="@font/in"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,16 +130,18 @@
         android:id="@+id/registerTextViewClickable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="4dp"
         android:onClick="onClick"
         android:textColor="@color/black"
-        android:text="Zarejestruj się"
+        android:text="@string/zarejestruj_sie"
         android:fontFamily="@font/in"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintTop_toBottomOf="@+id/registerText" />
 
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
