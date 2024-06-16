@@ -51,7 +51,6 @@ class MainActivity : AppCompatActivity() {
 
         val binding = FragmentNotificationsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         createNotificationChannel()
         binding.createNotification.setOnClickListener { scheduleNotification() }
 
@@ -136,9 +135,9 @@ class MainActivity : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setTitle("Notification Scheduled")
             .setMessage(
-                "Title: " + title +
-                "Message: " + message +
-                "At: " + dateFormat.format(date) + " " + timeFormat.format(date))
+                "Tytuł: " + title +
+                "Wiadomość: " + message +
+                "Data i godzina: " + dateFormat.format(date) + " " + timeFormat.format(date))
             .setPositiveButton("Okay"){_,_ ->}
             .show()
 
@@ -147,6 +146,8 @@ class MainActivity : AppCompatActivity() {
     private fun getTime(): Long {
         val binding = FragmentNotificationsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val timePicker24 = binding.timePicker
+        timePicker24.setIs24HourView(true)
         val minute = binding.timePicker.minute
         val hour = binding.timePicker.hour
         val day = binding.datePicker.dayOfMonth

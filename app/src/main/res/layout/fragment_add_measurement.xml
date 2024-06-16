@@ -103,8 +103,10 @@
         <Button
             android:id="@+id/confirmButton"
             android:orientation="horizontal"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:textSize="16sp"
             android:textAllCaps="false"
             android:textStyle="bold"
@@ -117,8 +119,10 @@
         <Button
             android:id="@+id/cancelButton"
             android:orientation="horizontal"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:textSize="16sp"
             android:textAllCaps="false"
             android:textStyle="bold"
