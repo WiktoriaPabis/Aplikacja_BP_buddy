@@ -28,7 +28,7 @@ class PasswordChangeDialogFragment : DialogFragment(), View.OnClickListener {
      * Metoda cyklu życia fragmentu dialogowego, odpowiadająca za tworzenie i inflację widoku dialogowego.
      *
      * @param inflater           Inflater używany do inflacji widoku.
-     * @param container          Kontener rodzicowski, do którego zostanie dołączony widok dialogowy.
+     * @param container          Kontener rodzicielski, do którego zostanie dołączony widok dialogowy.
      * @param savedInstanceState Zapisany stan fragmentu, jeśli jest ponownie tworzony po zniszczeniu.
      * @return Zainicjalizowany widok dialogowy.
      */
@@ -58,10 +58,10 @@ class PasswordChangeDialogFragment : DialogFragment(), View.OnClickListener {
     override fun onClick(view: View?) {
         when (view?.id) {
             R.id.confirmButton -> {
-                handleChangePassword()
+                handleChangePassword() //obsługa zmiany hasła
             }
             R.id.cancelButton -> {
-                dismiss() // Zamknij dialog
+                dismiss() // zamknięcie dialogu
             }
         }
     }
@@ -86,11 +86,11 @@ class PasswordChangeDialogFragment : DialogFragment(), View.OnClickListener {
                         Toast.makeText(context, "Hasło zostało pomyślnie zmienione", Toast.LENGTH_SHORT).show()
                         dismiss() // Zamknięcie dialog po udanej zmianie hasła
                     } else {
-                        Toast.makeText(context, "Wystąpił błąd podczas zmiany hasła: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                        showErrorSnackBar("Wystąpił błąd podczas zmiany hasła", true)
                     }
                 }
         } else {
-            Toast.makeText(context, "Użytkownik nie jest zalogowany", Toast.LENGTH_SHORT).show()
+            showErrorSnackBar("Użytkownik nie jest zalogowany", true)
         }
     }
 //    (activity as? BaseActivity)?.- rzutowanie kontekstu
@@ -100,7 +100,7 @@ class PasswordChangeDialogFragment : DialogFragment(), View.OnClickListener {
      *
      * @param password     Wprowadzone hasło.
      * @param repPassword  Powtórzone wprowadzone hasło.
-     * @return `true`, jeśli hasła są poprawne; `false`, jeśli wystąpił błąd walidacji.
+     * @return true, jeśli hasła są poprawne; false, jeśli wystąpił błąd walidacji.
      */
     private fun validatePassword(password: String, repPassword: String): Boolean {
         if (password.isEmpty()) {

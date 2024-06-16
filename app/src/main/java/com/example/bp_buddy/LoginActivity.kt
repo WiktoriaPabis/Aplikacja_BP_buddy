@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthInvalidUserException
 
 /**
- * KLasa realizuje obsługę logowanie użytkownika przy pomocy Firebase Authentication.
+ * KLasa realizuje obsługę logowania użytkownika przy pomocy Firebase Authentication.
  */
 class LoginActivity : BaseActivity(), View.OnClickListener {
 
@@ -72,7 +72,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
     /**
      * Metoda walidująca wprowadzone dane logowania.
      *
-     * @return True, jeśli dane są poprawne, w przeciwnym razie False.
+     * @return true, jeśli dane są poprawne, a false, gdy dane są niepraiwdłowe.
      */
     private fun validateLoginDetails(): Boolean {
         val email = inputEmail?.text.toString().trim()
@@ -97,7 +97,6 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
      * Metoda realizująca logowanie już zarejestrowanego użytkownika przy pomocy Firebase Authentication.
      */
     private fun logInRegisteredUser(){
-
 
         if(validateLoginDetails()){
             val email = inputEmail?.text.toString().trim(){ it<= ' '}

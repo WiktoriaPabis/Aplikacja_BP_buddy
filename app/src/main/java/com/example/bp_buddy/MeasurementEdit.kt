@@ -17,6 +17,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
+/**
+ * Fragment odpowiedzialny za edycję istniejącego pomiaru ciśnienia krwi.
+ */
 class EditMeasurementFragment : Fragment() {
 
     private var editSystolic: EditText? = null
@@ -29,6 +32,16 @@ class EditMeasurementFragment : Fragment() {
     private var docId: String? = null
     private var deleteButton: Button? = null
 
+
+    /**
+     * Tworzy i zwraca widok fragmentu edycji pomiaru.
+     *
+     * @param inflater           Obiekt LayoutInflater używany do nadmuchiwania widoku fragmentu.
+     * @param container          Kontener rodzicielski (w tym przypadku RecyclerView).
+     * @param savedInstanceState Opcjonalny stan poprzedniego zapisu fragmentu, zapisany
+     *                           w obiekcie Bundle.
+     * @return Zwraca przygotowany widok fragmentu.
+     */
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -68,6 +81,10 @@ class EditMeasurementFragment : Fragment() {
         return view
     }
 
+    /**
+     * Metoda do aktualizacji pomiaru w bazie danych Firebase Firestore.
+     * Sprawdza poprawność wprowadzonych danych przed wysłaniem ich do bazy.
+     */
     private fun updateMeasurement() {
         val systolic = editSystolic?.text.toString()
         val diastolic = editDiastolic?.text.toString()
@@ -108,7 +125,6 @@ class EditMeasurementFragment : Fragment() {
         }
 
 
-
         val db = Firebase.firestore
         val measurementMap = hashMapOf(
             "Ciśnienie skurczowe" to systolic,
@@ -132,6 +148,12 @@ class EditMeasurementFragment : Fragment() {
         }
     }
 
+    /**
+     * Metoda do wyświetlania paska Snackbar z informacją o błędzie.
+     *
+     * @param message      Wiadomość do wyświetlenia.
+     * @param errorMessage Flaga określająca typ komunikatu (true - błąd, false - sukces).
+     */
     private fun showErrorSnackBar(message: String, errorMessage: Boolean) {
         view?.let {
             val snackbar = Snackbar.make(it, message, Snackbar.LENGTH_LONG)
@@ -148,6 +170,10 @@ class EditMeasurementFragment : Fragment() {
         }
     }
 
+    /**
+     * Metoda do usuwania pomiaru z bazy danych Firebase Firestore.
+     * Po usunięciu pomiaru wyświetla powiadomienie toast z informacją.
+     */
     private fun deleteMeasurement() {
         val db = Firebase.firestore
         docId?.let {

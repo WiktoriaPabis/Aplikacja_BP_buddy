@@ -53,7 +53,7 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
      * Metoda cyklu życia fragmentu dialogowego, odpowiedzialna za tworzenie i inflację widoku dialogowego.
      *
      * @param inflater           Inflater używany do inflacji widoku.
-     * @param container          Kontener rodzicowski, do którego zostanie dołączony widok dialogowy.
+     * @param container          Kontener rodzicielski, do którego zostanie dołączony widok dialogowy.
      * @param savedInstanceState Zapisany stan fragmentu, jeśli jest ponownie tworzony po zniszczeniu.
      * @return Zainicjalizowany widok dialogowy.
      */
@@ -118,7 +118,7 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
     /**
      * Metoda do wyboru nastroju użytkownika.
      *
-     * @param mood Wybrany nastroju (od 1 do 5).
+     * @param mood Wybrane samopoczucie (od 1 do 5).
      */
     private fun selectMood(mood: Int) {
         selectedMood = mood
@@ -193,6 +193,21 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
             return false
         }
 
+        if(systolic.toInt() < 20 || systolic.toInt() > 200){
+            showErrorSnackBar("Nierzeczywista wartość ciśnienia rozkurczowego/ błąd pomiaru", true)
+            return false
+        }
+
+        if(diastolic.toInt() < 50 || systolic.toInt() > 250){
+            showErrorSnackBar("Nierzeczywista wartość ciśnienia skurczowego/ błąd pomiaru", true)
+            return false
+        }
+
+        if(pulse.toInt() < 20 || pulse.toInt() >250){
+            showErrorSnackBar("Nierzeczywista wartość pulsu/ błąd pomiaru", true)
+            return false
+        }
+
         return true
     }
 
@@ -253,7 +268,12 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
         }
     }
 
-
+    /**
+     * Wyświetla Snackbar z komunikatem błędu lub sukcesu.
+     *
+     * @param message      Treść komunikatu do wyświetlenia.
+     * @param errorMessage Flaga określająca, czy komunikat jest błędem (true) czy sukcesem (false).
+     */
     private fun showErrorSnackBar(message: String, errorMessage: Boolean) {
         view?.let {
             val snackbar = Snackbar.make(it, message, Snackbar.LENGTH_LONG)

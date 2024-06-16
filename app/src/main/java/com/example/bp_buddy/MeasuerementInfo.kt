@@ -54,7 +54,7 @@ class MeasurementInfoDialogFragment : DialogFragment(), View.OnClickListener {
      * Metoda cyklu życia fragmentu dialogowego, odpowiedzialna za tworzenie i inflację widoku dialogowego.
      *
      * @param inflater           Inflater używany do inflacji widoku.
-     * @param container          Kontener rodzicowski, do którego zostanie dołączony widok dialogowy.
+     * @param container          Kontener rodzicielski, do którego zostanie dołączony widok dialogowy.
      * @param savedInstanceState Zapisany stan fragmentu, jeśli jest ponownie tworzony po zniszczeniu.
      * @return Zainicjalizowany widok dialogowy.
      */
@@ -80,8 +80,6 @@ class MeasurementInfoDialogFragment : DialogFragment(), View.OnClickListener {
 
         // Ustawienie nasłuchiwania kliknięć przycisków
         confirmButton1?.setOnClickListener(this)
-
-
 
         return view
     }
@@ -119,7 +117,7 @@ class MeasurementInfoDialogFragment : DialogFragment(), View.OnClickListener {
         systolicValue in 0..89 -> "zbyt niskie, udaj się do lekarza/zażyj leki"
         systolicValue in 90..119 -> "optymalne"
         systolicValue in 120..129 -> "w normie"
-        systolicValue in 130..139 -> "wysokie"
+        systolicValue in 130..140 -> "wysokie"
         systolicValue > 140 -> "zbyt wysokie, udaj się do lekarza/zażyj leki"
         else -> ""
     }
@@ -131,7 +129,7 @@ class MeasurementInfoDialogFragment : DialogFragment(), View.OnClickListener {
         diastolicValue in 0..59 -> "zbyt niskie, udaj się do lekarza/zażyj leki"
         diastolicValue in 60..79 -> "optymalne"
         diastolicValue in 80..84 -> "w normie"
-        diastolicValue in 85..89 -> "wysokie"
+        diastolicValue in 85..90 -> "wysokie"
         diastolicValue > 90 -> "zbyt wysokie, udaj się do lekarza/zażyj leki"
         else -> ""
     }
