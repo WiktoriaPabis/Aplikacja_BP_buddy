@@ -51,8 +51,8 @@
                     android:datePickerMode="spinner"
                     android:calendarViewShown="false"
                     android:layout_gravity="center"
-                    android:scaleX="0.7"
-                    android:scaleY="0.7"
+                    android:scaleX="1"
+                    android:scaleY="1"
                     android:layout_marginHorizontal="-30dp"
                     />
 
@@ -63,21 +63,27 @@
                     android:layout_weight="1"
                     android:timePickerMode="spinner"
                     android:layout_gravity="center"
-                    android:scaleX="0.7"
-                    android:scaleY="0.7"
+                    android:scaleX="1"
+                    android:scaleY="1"
                     android:layout_marginHorizontal="-30dp"
                     />
 
             </LinearLayout>
-
-            <Button
-                android:id="@+id/createNotification"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                />
-
         </LinearLayout>
+        <Button
+            android:id="@+id/createNotification"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/zaplanuj"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/button_box"
+            android:fontFamily="@font/in"
+            android:layout_marginTop="10dp"
+            />
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

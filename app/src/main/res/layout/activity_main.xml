@@ -54,6 +54,7 @@
         </LinearLayout>
     </FrameLayout>
 
+
     <Button
         android:id="@+id/addMeasurementButton"
         android:layout_width="140dp"
