@@ -1,0 +1,23 @@
+[33m32640f4[m[33m ([m[1;36mHEAD -> [m[1;32msasza[m[33m, [m[1;31morigin/sasza[m[33m, [m[1;31morigin/Wiktoria[m[33m, [m[1;32mWiktoria[m[33m)[m HEAD@{0}: checkout: moving from master to sasza
+[33mcaeceb7[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{1}: checkout: moving from sasza to master
+[33m32640f4[m[33m ([m[1;36mHEAD -> [m[1;32msasza[m[33m, [m[1;31morigin/sasza[m[33m, [m[1;31morigin/Wiktoria[m[33m, [m[1;32mWiktoria[m[33m)[m HEAD@{2}: merge Wiktoria: Fast-forward
+[33macbf12c[m HEAD@{3}: merge Wiktoria: Fast-forward
+[33meb50d12[m HEAD@{4}: checkout: moving from Wiktoria to sasza
+[33mdaba3a2[m HEAD@{5}: checkout: moving from sasza to Wiktoria
+[33meb50d12[m HEAD@{6}: commit: Menu
+[33m8338385[m HEAD@{7}: commit: Menu
+[33mdaba3a2[m HEAD@{8}: merge origin/Wiktoria: Fast-forward
+[33mcaeceb7[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{9}: checkout: moving from Wiktoria to sasza
+[33mdaba3a2[m HEAD@{10}: commit (merge): Menu
+[33m50625c1[m HEAD@{11}: checkout: moving from Wiktoria to Wiktoria
+[33m50625c1[m HEAD@{12}: commit: Menu
+[33m3800eef[m HEAD@{13}: reset: moving to HEAD
+[33m3800eef[m HEAD@{14}: reset: moving to HEAD
+[33m3800eef[m HEAD@{15}: commit: Menu
+[33mf806a45[m HEAD@{16}: commit: Menu
+[33mc9a93e5[m HEAD@{17}: commit (merge): Aplikacja BP Buddy
+[33mffc6fdc[m HEAD@{18}: commit: Aplikacja BP Buddy
+[33ma0277fe[m HEAD@{19}: checkout: moving from sasza to Wiktoria
+[33mcaeceb7[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{20}: checkout: moving from sasza to sasza
+[33mcaeceb7[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{21}: checkout: moving from master to sasza
+[33mcaeceb7[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{22}: commit (initial): Aplikacja BP Buddy
