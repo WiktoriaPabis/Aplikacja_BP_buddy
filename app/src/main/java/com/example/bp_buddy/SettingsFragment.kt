@@ -12,6 +12,9 @@ import com.google.firebase.auth.FirebaseAuth
 
 /**
  * Fragment ustawień aplikacji, obsługujący opcje zmiany hasła i wylogowania użytkownika.
+ *
+ * @property logoutButton         Przycisk do wylogowania użytkownika.
+ * @property passwordChangeButton Przycisk do zmiany hasła użytkownika.
  */
 class SettingsFragment : Fragment() {
     private var logoutButton: Button? = null
@@ -21,7 +24,7 @@ class SettingsFragment : Fragment() {
      * Metoda cyklu życia fragmentu, odpowiadająca za tworzenie i inflację widoku fragmentu.
      *
      * @param inflater           Inflater używany do inflacji widoku.
-     * @param container          Kontener rodzicowski, do którego zostanie dołączony widok fragmentu
+     * @param container          Kontener rodzicielski, do którego zostanie dołączony widok fragmentu
      *                           (null, jeśli nie ma).
      * @param savedInstanceState Zapisany stan fragmentu, jeśli jest ponownie tworzony po zniszczeniu.
      * @return Zainicjalizowany widok fragmentu.
@@ -50,6 +53,10 @@ class SettingsFragment : Fragment() {
             FirebaseAuth.getInstance().signOut()
 
             // Przejście do ekranu logowania
+            // Uruchamia aktywność logowania LoginActivity w nowym zadaniu, czyści poprzednie
+            // aktywności z bieżącego zadania - przydatne, gdy rozpoczyna się nową sesję logowania/
+            // rejestracji usera (eliminacja wszystkich poprzednich aktywności z historii aplikacji)
+
             val intent = Intent(activity, LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)

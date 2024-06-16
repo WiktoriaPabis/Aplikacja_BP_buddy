@@ -53,7 +53,7 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
      * Metoda cyklu życia fragmentu dialogowego, odpowiedzialna za tworzenie i inflację widoku dialogowego.
      *
      * @param inflater           Inflater używany do inflacji widoku.
-     * @param container          Kontener rodzicowski, do którego zostanie dołączony widok dialogowy.
+     * @param container          Kontener rodzicielski, do którego zostanie dołączony widok dialogowy.
      * @param savedInstanceState Zapisany stan fragmentu, jeśli jest ponownie tworzony po zniszczeniu.
      * @return Zainicjalizowany widok dialogowy.
      */
@@ -198,7 +198,7 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
             return false
         }
 
-        if(systolic.toInt() < 50 || systolic.toInt() > 250){
+        if(diastolic.toInt() < 50 || systolic.toInt() > 250){
             showErrorSnackBar("Nierzeczywista wartość ciśnienia skurczowego/ błąd pomiaru", true)
             return false
         }

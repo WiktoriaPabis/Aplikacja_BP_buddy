@@ -37,7 +37,7 @@ class EditMeasurementFragment : Fragment() {
      * Tworzy i zwraca widok fragmentu edycji pomiaru.
      *
      * @param inflater           Obiekt LayoutInflater używany do nadmuchiwania widoku fragmentu.
-     * @param container          Rodzic widoku fragmentu (w tym przypadku RecyclerView).
+     * @param container          Kontener rodzicielski (w tym przypadku RecyclerView).
      * @param savedInstanceState Opcjonalny stan poprzedniego zapisu fragmentu, zapisany
      *                           w obiekcie Bundle.
      * @return Zwraca przygotowany widok fragmentu.

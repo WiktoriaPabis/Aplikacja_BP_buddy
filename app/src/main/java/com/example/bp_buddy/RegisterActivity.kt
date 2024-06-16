@@ -59,12 +59,13 @@ class RegisterActivity : BaseActivity() {
      * Sprawdza poprawność danych wprowadzonych podczas rejestracji użytkownika.
      *
      * Sprawdza czy pole e-mail, hasło i powtórzone hasło nie są puste.
-     * Sprawdza również, czy hasło i powtórzone hasło są takie same.
+     * Sprawdza również, czy hasło i powtórzone hasło są takie same i czy zawierają
      *
-     * @return True, jeśli dane są poprawne, w przeciwnym razie False.
+     * @return true, jeśli dane są poprawne, false, jeśli niepoprawne.
      */
     private fun validateRegisterDetails(): Boolean {
-        val email = inputEmail?.text.toString().trim()
+        val email = inputEmail?.text.toString().trim() // trim- usuwanie białych znaków
+                             // (np. spacji, tabulacji) z początku i końca ciągu znaków.
         val password = inputPassword?.text.toString().trim()
         val repPassword = inputRepPass?.text.toString().trim()
 
@@ -118,7 +119,8 @@ class RegisterActivity : BaseActivity() {
     fun goToLogin(view: View) {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
-        finish() // finish(), po to aby użytkownik nie mógł już wrócić do aktualnej aktywności bez restartowania aplikacji
+        finish() // finish(), po to aby użytkownik nie mógł już wrócić do aktualnej aktywności bez
+                 // restartowania aplikacji
     }
 
     /**
