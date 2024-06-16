@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.core.app.NotificationCompat
 
+
 const val notificationID = 1
 const val channelID = "channel1"
 const val titleExtra = "titleExtra"
@@ -26,3 +27,4 @@ class Notification: BroadcastReceiver() {
     manager.notify(notificationID, notification)
     }
 }
+
