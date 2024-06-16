@@ -14,6 +14,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
+/**
+ * Fragment odpowiedzialny za wyświetlanie historii pomiarów użytkownika.
+ * Umożliwia przeglądanie, odświeżanie oraz edycję zapisanych pomiarów.
+ */
 class HistoryFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
@@ -21,6 +25,15 @@ class HistoryFragment : Fragment() {
     private val measurementsList = mutableListOf<Map<String, Any>>()
     private var refreshButton: Button? = null
 
+    /**
+     * Metoda cyklu życia fragmentu, wywoływana podczas tworzenia widoku.
+     * Inicjalizuje widok i ustawia adapter dla RecyclerView.
+     *
+     * @param inflater           Obiekt LayoutInflater używany do tworzenia widoku fragmentu.
+     * @param container          Rodzic, do którego widok fragmentu zostanie dołączony.
+     * @param savedInstanceState Zapisany stan fragmentu.
+     * @return Widok fragmentu.
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -59,6 +72,11 @@ class HistoryFragment : Fragment() {
             return view
         }
 
+        /**
+        * Pobiera wszystkie pomiary użytkownika z bazy danych Firebase.
+        *
+        * @param email Adres e-mail aktualnie zalogowanego użytkownika.
+        */
         private fun getAllMeasurements(email: String) {
             val db = Firebase.firestore
             val userCollection = db.collection(email)
@@ -83,6 +101,12 @@ class HistoryFragment : Fragment() {
                 }
         }
 
+    /**
+     * Otwiera ekran edycji pomiaru, przekazując dane pomiaru i ID dokumentu do fragmentu edycji.
+     *
+     * @param measurementData Mapa zawierająca dane pomiaru.
+     * @param docId           ID dokumentu pomiaru.
+     */
     private fun EditScreen(measurementData: Map<String, Any>, docId: String) {
         val fragment = EditMeasurementFragment()
         val args = Bundle().apply {

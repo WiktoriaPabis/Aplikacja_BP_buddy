@@ -66,6 +66,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Metoda do zamiany obecnego fragmentu na nowy fragment.
+     *
+     * @param fragment Nowy fragment, który ma być wyświetlony.
+     */
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)

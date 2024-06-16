@@ -81,8 +81,6 @@ class MeasurementInfoDialogFragment : DialogFragment(), View.OnClickListener {
         // Ustawienie nasłuchiwania kliknięć przycisków
         confirmButton1?.setOnClickListener(this)
 
-
-
         return view
     }
 

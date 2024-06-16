@@ -1,6 +1,5 @@
 package com.example.bp_buddy
 
-
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
@@ -13,7 +12,7 @@ open class BaseActivity : AppCompatActivity() {
 
     /**
      * Wyświetla pasek Snackbar z określonym komunikatem.
-     * @param message Wiadomość do wyświetlenia w pasku Snackbar.
+     * @param message      Wiadomość do wyświetlenia w pasku Snackbar.
      * @param errorMessage Flaga określająca, czy komunikat jest błędem (true) lub sukcesem (false).
      */
     fun showErrorSnackBar(message: String, errorMessage: Boolean){
