@@ -23,6 +23,7 @@
 
 
 
+
     <color name="colorSnackBarSuccess">#03A9F4</color> <!-- kolor Snackbara dla sukcesu -->
     <color name="colorSnackBarError">#EB1B63</color> <!-- kolor Snackbara dla błędu -->
 

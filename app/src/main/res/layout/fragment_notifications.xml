@@ -30,42 +30,51 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/black"
             android:padding="10dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:background="@drawable/edittext_box">
+            android:background="@color/pink_700">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/black"
+                android:calendarTextColor="@color/black"
                 android:orientation="horizontal"
-                android:padding="10dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp">
+                android:padding="10dp">
 
                 <DatePicker
                     android:id="@+id/datePicker"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:calendarTextColor="@color/black"
                     android:layout_weight="1"
                     android:datePickerMode="spinner"
                     android:calendarViewShown="false"
                     android:layout_gravity="center"
                     android:scaleX="1"
                     android:scaleY="1"
-                    android:layout_marginHorizontal="-30dp"
+                    android:layout_marginEnd="8dp"
                     />
 
                 <TimePicker
                     android:id="@+id/timePicker"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@android:color/black"
+                    android:calendarTextColor="@color/black"
+                    android:textColor="@android:color/black"
                     android:layout_weight="1"
                     android:timePickerMode="spinner"
                     android:layout_gravity="center"
                     android:scaleX="1"
                     android:scaleY="1"
-                    android:layout_marginHorizontal="-30dp"
+                    android:layout_marginStart="8dp"
                     />
 
             </LinearLayout>
@@ -92,6 +101,7 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         app:itemIconTint="@color/black"
+        android:textColorHint="@android:color/black"
         app:itemTextColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
