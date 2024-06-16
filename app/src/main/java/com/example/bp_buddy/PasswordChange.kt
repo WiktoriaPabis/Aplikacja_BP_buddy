@@ -37,7 +37,6 @@ class PasswordChangeDialogFragment : DialogFragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_password_change, container, false)
-
         // Inicjalizacja pól wejściowych i przycisków
         inputPassword = view.findViewById(R.id.inputPassword)
         inputPasswordConfirm = view.findViewById(R.id.inputPasswordConfirm)

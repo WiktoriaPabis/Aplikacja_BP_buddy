@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="@drawable/edittext_box"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
@@ -56,9 +57,18 @@
 
         <Button
             android:id="@+id/confirmButton1"
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/button_box"
+            android:fontFamily="@font/in"
             android:text="@string/potwierdz" />
 
     </LinearLayout>
