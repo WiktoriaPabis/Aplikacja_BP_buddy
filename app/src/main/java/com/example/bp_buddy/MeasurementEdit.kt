@@ -125,6 +125,21 @@ class EditMeasurementFragment : Fragment() {
             return
         }
 
+        if(systolic.toInt() < 20 || systolic.toInt() > 200){
+            showErrorSnackBar("Nierzeczywista wartość ciśnienia rozkurczowego/ błąd pomiaru", true)
+            return
+        }
+
+        if(diastolic.toInt() < 50 || diastolic.toInt() > 250){
+            showErrorSnackBar("Nierzeczywista wartość ciśnienia skurczowego/ błąd pomiaru", true)
+            return
+        }
+
+        if(pulse.toInt() < 20 || pulse.toInt() >250){
+            showErrorSnackBar("Nierzeczywista wartość pulsu/ błąd pomiaru", true)
+            return
+        }
+
         val db = Firebase.firestore
         val measurementMap = hashMapOf(
             "Ciśnienie skurczowe" to systolic,

@@ -198,7 +198,7 @@ class AddMeasurementDialogFragment : DialogFragment(), View.OnClickListener {
             return false
         }
 
-        if(diastolic.toInt() < 50 || systolic.toInt() > 250){
+        if(diastolic.toInt() < 50 || diastolic.toInt() > 250){
             showErrorSnackBar("Nierzeczywista wartość ciśnienia skurczowego/ błąd pomiaru", true)
             return false
         }
